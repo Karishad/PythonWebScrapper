@@ -14,7 +14,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+# url to scrape
 url = "https://en.wikipedia.org/wiki/Main_Page"
-request = requests.Request(url)
+request = requests.get(url)
 soup = BeautifulSoup(request.text, "html.parser")
 print(soup.title)
