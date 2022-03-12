@@ -13,3 +13,8 @@
 
 from bs4 import BeautifulSoup
 import requests
+
+url = "https://en.wikipedia.org/wiki/Main_Page"
+request = requests.Request(url)
+soup = BeautifulSoup(request.text, "html.parser")
+print(soup.title)
